@@ -1,0 +1,107 @@
+═══════════════════════════════════════════════════════
+ B210 Configuration for SDR++ - Step by Step
+═══════════════════════════════════════════════════════
+
+CRITICAL: Which antenna port is your antenna connected to?
+- If connected to the port labeled "TX/RX" → use antenna "TX/RX"
+- If connected to the port labeled "RX2" → use antenna "RX2"
+
+Most likely you're using RX2 for receive-only operation.
+
+═══════════════════════════════════════════════════════
+STEP 1: SOURCE CONFIGURATION
+═══════════════════════════════════════════════════════
+
+In SDR++, click "Source" dropdown and select "UHD"
+
+Then configure these settings:
+
+Device String: type=b200
+  (or click refresh and select your B210 from the list)
+
+Sample Rate: 2400000 (2.4 MSPS)
+  Start with this, can go up to 56 MHz later
+
+Channel: 0
+  Use RX channel 0
+
+Antenna: RX2  ← CRITICAL! Try both "RX2" and "TX/RX" to see which works
+  This depends on which physical port your antenna is connected to
+
+Subdev: A:A or A:B
+  Try A:A first (this is RX channel 0, frontend A)
+
+═══════════════════════════════════════════════════════
+STEP 2: GAIN CONFIGURATION
+═══════════════════════════════════════════════════════
+
+The B210 has a single "PGA" gain control (0-76 dB)
+
+Recommended gain for FM radio: 50-70 dB
+
+Start with: 60 dB
+
+If signal too weak: increase to 70-76 dB
+If signal saturated: decrease to 40-50 dB
+
+═══════════════════════════════════════════════════════
+STEP 3: FREQUENCY & DEMODULATOR
+═══════════════════════════════════════════════════════
+
+Frequency: 98500000 (98.5 MHz)
+
+Radio Mode: WFM (Wideband FM)
+
+Bandwidth: 200000 Hz (200 kHz) for FM broadcast
+
+═══════════════════════════════════════════════════════
+STEP 4: EXPECTED RESULTS
+═══════════════════════════════════════════════════════
+
+If configured correctly, you should see:
+- Waterfall showing activity at 98.5 MHz
+- Signal strength around -40 to -70 dBFS
+- Clear FM radio audio when demodulated
+
+If you see nothing:
+1. Try switching antenna between "RX2" and "TX/RX"
+2. Increase gain to 70 dB
+3. Verify physical antenna is actually connected
+4. Try a different frequency you know has a strong station
+
+═══════════════════════════════════════════════════════
+STEP 5: COMPARISON TO CARIBOULITE
+═══════════════════════════════════════════════════════
+
+Cariboulite HiF @ 98.5 MHz: -80 dBFS with 34 AGC gain
+
+The B210 should show similar performance:
+- Try gain: 60-70 dB
+- Expected level: -60 to -80 dBFS
+- The gain scales are different between devices!
+
+═══════════════════════════════════════════════════════
+TROUBLESHOOTING
+═══════════════════════════════════════════════════════
+
+Problem: No signal at all, flat waterfall
+Solution:
+  → Wrong antenna setting! Try switching RX2 ↔ TX/RX
+  → Increase gain to maximum (76 dB) to verify
+  → Check which physical port antenna is connected to
+
+Problem: Weak signal compared to Cariboulite
+Solution:
+  → B210 may need 60-70 dB instead of Cariboulite's 34
+  → Try different sample rates (3.2 MHz, 4.0 MHz)
+
+Problem: "No devices found" in SDR++
+Solution:
+  → Close SDR++, replug B210 USB
+  → Run: sudo usbreset 2500:0020
+  → Launch "SDR++ (B210)" from menu (not regular SDR++)
+
+Problem: Device appears but won't start
+Solution:
+  → Check UHD_IMAGES_DIR is set
+  → Try from terminal: UHD_IMAGES_DIR=/usr/local/share/uhd/images sdrpp

@@ -1,0 +1,339 @@
+=== CaribouLite Wide-Band Frequency Sweep ===
+Started at: Fri Dec  5 03:39:30 PM EST 2025
+
+Starting wide-band sweep across multiple ranges...
+
+=========================================
+Scanning VHF_Low_Band: 50MHz - 108MHz
+Step: 5MHz | Time: 15:39:30
+=========================================
+Scanning 50.00 MHz... quiet
+Scanning 55.00 MHz... quiet
+Scanning 60.00 MHz... quiet
+Scanning 65.00 MHz... quiet
+Scanning 70.00 MHz... quiet
+Scanning 75.00 MHz... quiet
+Scanning 80.00 MHz... quiet
+Scanning 85.00 MHz... quiet
+Scanning 90.00 MHz... quiet
+Scanning 95.00 MHz... quiet
+Scanning 100.00 MHz... quiet
+Scanning 105.00 MHz... quiet
+
+=========================================
+Scanning Aviation_VHF: 108MHz - 137MHz
+Step: 2MHz | Time: 15:42:30
+=========================================
+Scanning 108.00 MHz... quiet
+Scanning 110.00 MHz... quiet
+Scanning 112.00 MHz... quiet
+Scanning 114.00 MHz... quiet
+Scanning 116.00 MHz... quiet
+Scanning 118.00 MHz... quiet
+Scanning 120.00 MHz... quiet
+Scanning 122.00 MHz... quiet
+Scanning 124.00 MHz... quiet
+Scanning 126.00 MHz... quiet
+Scanning 128.00 MHz... quiet
+Scanning 130.00 MHz... quiet
+Scanning 132.00 MHz... quiet
+Scanning 134.00 MHz... quiet
+Scanning 136.00 MHz... quiet
+
+=========================================
+Scanning VHF_High_Band: 137MHz - 174MHz
+Step: 3MHz | Time: 15:46:15
+=========================================
+Scanning 137.00 MHz... quiet
+Scanning 140.00 MHz... quiet
+Scanning 143.00 MHz... quiet
+Scanning 146.00 MHz... quiet
+Scanning 149.00 MHz... quiet
+Scanning 152.00 MHz... quiet
+Scanning 155.00 MHz... quiet
+Scanning 158.00 MHz... quiet
+Scanning 161.00 MHz... quiet
+Scanning 164.00 MHz... quiet
+Scanning 167.00 MHz... quiet
+Scanning 170.00 MHz... quiet
+Scanning 173.00 MHz... quiet
+
+=========================================
+Scanning VHF_UHF_Transition: 174MHz - 300MHz
+Step: 10MHz | Time: 15:49:30
+=========================================
+Scanning 174.00 MHz... quiet
+Scanning 184.00 MHz... quiet
+Scanning 194.00 MHz... quiet
+Scanning 204.00 MHz... quiet
+Scanning 214.00 MHz... quiet
+Scanning 224.00 MHz... quiet
+Scanning 234.00 MHz... quiet
+Scanning 244.00 MHz... quiet
+Scanning 254.00 MHz... quiet
+Scanning 264.00 MHz... quiet
+Scanning 274.00 MHz... quiet
+Scanning 284.00 MHz... quiet
+Scanning 294.00 MHz... quiet
+
+=========================================
+Scanning UHF_ISM_Public_Safety: 300MHz - 512MHz
+Step: 5MHz | Time: 15:52:45
+=========================================
+Scanning 300.00 MHz... quiet
+Scanning 305.00 MHz... quiet
+Scanning 310.00 MHz... quiet
+Scanning 315.00 MHz... quiet
+Scanning 320.00 MHz... quiet
+Scanning 325.00 MHz... quiet
+Scanning 330.00 MHz... quiet
+Scanning 335.00 MHz... quiet
+Scanning 340.00 MHz... quiet
+Scanning 345.00 MHz... quiet
+Scanning 350.00 MHz... quiet
+Scanning 355.00 MHz... quiet
+Scanning 360.00 MHz... quiet
+Scanning 365.00 MHz... quiet
+Scanning 370.00 MHz... quiet
+Scanning 375.00 MHz... quiet
+Scanning 380.00 MHz... quiet
+Scanning 385.00 MHz... quiet
+Scanning 390.00 MHz... quiet
+Scanning 395.00 MHz... quiet
+Scanning 400.00 MHz... quiet
+Scanning 405.00 MHz... quiet
+Scanning 410.00 MHz... quiet
+Scanning 415.00 MHz... quiet
+Scanning 420.00 MHz... quiet
+Scanning 425.00 MHz... quiet
+Scanning 430.00 MHz... quiet
+Scanning 435.00 MHz... quiet
+Scanning 440.00 MHz... quiet
+Scanning 445.00 MHz... quiet
+Scanning 450.00 MHz... quiet
+Scanning 455.00 MHz... quiet
+Scanning 460.00 MHz... quiet
+Scanning 465.00 MHz... quiet
+Scanning 470.00 MHz... quiet
+Scanning 475.00 MHz... quiet
+Scanning 480.00 MHz... quiet
+Scanning 485.00 MHz... quiet
+Scanning 490.00 MHz... quiet
+Scanning 495.00 MHz... quiet
+Scanning 500.00 MHz... quiet
+Scanning 505.00 MHz... quiet
+Scanning 510.00 MHz... quiet
+
+=========================================
+Scanning UHF_High: 512MHz - 900MHz
+Step: 20MHz | Time: 16:03:30
+=========================================
+Scanning 512.00 MHz... quiet
+Scanning 532.00 MHz... quiet
+Scanning 552.00 MHz... quiet
+Scanning 572.00 MHz... quiet
+Scanning 592.00 MHz... quiet
+Scanning 612.00 MHz... quiet
+Scanning 632.00 MHz... quiet
+Scanning 652.00 MHz... quiet
+Scanning 672.00 MHz... quiet
+Scanning 692.00 MHz... quiet
+Scanning 712.00 MHz... quiet
+Scanning 732.00 MHz... ACTIVE! Detections: 0
+0, Decoded: 2
+  Found decoded data! Running extended 60s scan...
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+time      : 2025-12-05 16:06:43
+model     : Acurite-986  id        : 65535
+time      : 2025-12-05 16:06:48
+model     : HT680-Remote Address   : 0x0B6DA8
+Button 1  :              Button 2  :               Button 3  :               Button 4  :               Tristate code: Z1XZ1XZZZ01Z0ZZX0X
+time      : 2025-12-05 16:06:48
+model     : HT680-Remote Address   : 0x0B0ADA
+Button 1  :              Button 2  :               Button 3  :               Button 4  :               Tristate code: Z100ZZ1XZZ0ZZ10ZZZ
+time      : 2025-12-05 16:07:12
+model     : HT680-Remote Address   : 0x0D6DBF
+Button 1  :              Button 2  : PRESSED       Button 3  : PRESSED       Button 4  :               Tristate code: 1XXZ1XZ111ZZ101ZZ0
+time      : 2025-12-05 16:07:13
+model     : Acurite-986  id        : 32711
+time      : 2025-12-05 16:07:29
+model     : Regency-Remote                         channel   : 15            command   : light_intensity                         value     : 64 %          mic       : CHECKSUM
+time      : 2025-12-05 16:07:29
+model     : Regency-Remote                         channel   : 15            command   : fan_speed     value     : stop          mic       : CHECKSUM
+Scanning 752.00 MHz... quiet
+Scanning 772.00 MHz... quiet
+Scanning 792.00 MHz... quiet
+Scanning 812.00 MHz... quiet
+Scanning 832.00 MHz... quiet
+Scanning 852.00 MHz... quiet
+Scanning 872.00 MHz... quiet
+Scanning 892.00 MHz... quiet
+
+=========================================
+Scanning ISM_900_Cellular: 900MHz - 1000MHz
+Step: 5MHz | Time: 16:09:30
+=========================================
+Scanning 900.00 MHz... quiet
+Scanning 905.00 MHz... quiet
+Scanning 910.00 MHz... quiet
+Scanning 915.00 MHz... quiet
+Scanning 920.00 MHz... quiet
+Scanning 925.00 MHz... quiet
+Scanning 930.00 MHz... quiet
+Scanning 935.00 MHz... quiet
+Scanning 940.00 MHz... quiet
+Scanning 945.00 MHz... quiet
+Scanning 950.00 MHz... quiet
+Scanning 955.00 MHz... quiet
+Scanning 960.00 MHz... quiet
+Scanning 965.00 MHz... quiet
+Scanning 970.00 MHz... quiet
+Scanning 975.00 MHz... quiet
+Scanning 980.00 MHz... quiet
+Scanning 985.00 MHz... quiet
+Scanning 990.00 MHz... quiet
+Scanning 995.00 MHz... quiet
+Scanning 1000.00 MHz... quiet
+
+=========================================
+Scanning L_Band: 1000MHz - 1700MHz
+Step: 25MHz | Time: 16:14:45
+=========================================
+Scanning 1000.00 MHz... quiet
+Scanning 1025.00 MHz... quiet
+Scanning 1050.00 MHz... quiet
+Scanning 1075.00 MHz... quiet
+Scanning 1100.00 MHz... quiet
+Scanning 1125.00 MHz... quiet
+Scanning 1150.00 MHz... quiet
+Scanning 1175.00 MHz... quiet
+Scanning 1200.00 MHz... quiet
+Scanning 1225.00 MHz... quiet
+Scanning 1250.00 MHz... quiet
+Scanning 1275.00 MHz... quiet
+Scanning 1300.00 MHz... quiet
+Scanning 1325.00 MHz... quiet
+Scanning 1350.00 MHz... quiet
+Scanning 1375.00 MHz... quiet
+Scanning 1400.00 MHz... quiet
+Scanning 1425.00 MHz... quiet
+Scanning 1450.00 MHz... quiet
+Scanning 1475.00 MHz... quiet
+Scanning 1500.00 MHz... quiet
+Scanning 1525.00 MHz... quiet
+Scanning 1550.00 MHz... quiet
+Scanning 1575.00 MHz... quiet
+Scanning 1600.00 MHz... quiet
+Scanning 1625.00 MHz... quiet
+Scanning 1650.00 MHz... quiet
+Scanning 1675.00 MHz... quiet
+Scanning 1700.00 MHz... quiet
+
+=========================================
+Scanning S_Band_Lower: 1700MHz - 2500MHz
+Step: 50MHz | Time: 16:22:00
+=========================================
+Scanning 1700.00 MHz... quiet
+Scanning 1750.00 MHz... quiet
+Scanning 1800.00 MHz... quiet
+Scanning 1850.00 MHz... quiet
+Scanning 1900.00 MHz... quiet
+Scanning 1950.00 MHz... quiet
+Scanning 2000.00 MHz... quiet
+Scanning 2050.00 MHz... quiet
+Scanning 2100.00 MHz... quiet
+Scanning 2150.00 MHz... quiet
+Scanning 2200.00 MHz... quiet
+Scanning 2250.00 MHz... quiet
+Scanning 2300.00 MHz... quiet
+Scanning 2350.00 MHz... quiet
+Scanning 2400.00 MHz... quiet
+Scanning 2450.00 MHz... quiet
+Scanning 2500.00 MHz... quiet
+
+=========================================
+Scanning ISM_2.4GHz_Detailed: 2400MHz - 2500MHz
+Step: 10MHz | Time: 16:26:15
+=========================================
+Scanning 2400.00 MHz... quiet
+Scanning 2410.00 MHz... quiet
+Scanning 2420.00 MHz... quiet
+Scanning 2430.00 MHz... quiet
+Scanning 2440.00 MHz... ACTIVE! Detections: 0
+0, Decoded: 2
+  Found decoded data! Running extended 60s scan...
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+time      : 2025-12-05 16:27:39
+model     : Regency-Remote                         channel   : 15            command   : fan_speed     value     : stop          mic       : CHECKSUM
+time      : 2025-12-05 16:27:45
+model     : Regency-Remote                         channel   : 11            command   : light_intensity                         value     : 72 %          mic       : CHECKSUM
+time      : 2025-12-05 16:27:52
+time      : 2025-12-05 16:28:10
+model     : Acurite-986  id        : 1089
+time      : 2025-12-05 16:28:17
+model     : Fineoffset-WHx080                      Msg type  : 1             Station ID: 251
+time      : 2025-12-05 16:28:28
+model     : Acurite-01185M                         id        : 0
+Scanning 2450.00 MHz... quiet
+Scanning 2460.00 MHz... quiet
+Scanning 2470.00 MHz... quiet
+Scanning 2480.00 MHz... quiet
+Scanning 2490.00 MHz... quiet
+Scanning 2500.00 MHz... quiet
+
+=========================================
+Scanning S_to_C_Band: 2500MHz - 4000MHz
+Step: 100MHz | Time: 16:30:00
+=========================================
+Scanning 2500.00 MHz... quiet
+Scanning 2600.00 MHz... quiet
+Scanning 2700.00 MHz... quiet
+Scanning 2800.00 MHz... quiet
+Scanning 2900.00 MHz... quiet
+Scanning 3000.00 MHz... quiet
+Scanning 3100.00 MHz... quiet
+Scanning 3200.00 MHz... quiet
+Scanning 3300.00 MHz... quiet
+Scanning 3400.00 MHz... quiet
+Scanning 3500.00 MHz... quiet
+Scanning 3600.00 MHz... quiet
+Scanning 3700.00 MHz... quiet
+Scanning 3800.00 MHz... quiet
+Scanning 3900.00 MHz... quiet
+Scanning 4000.00 MHz... quiet
+
+=========================================
+Scanning C_Band_to_6GHz: 4000MHz - 6000MHz
+Step: 200MHz | Time: 16:34:00
+=========================================
+Scanning 4000.00 MHz... quiet
+Scanning 4200.00 MHz... quiet
+Scanning 4400.00 MHz... quiet
+Scanning 4600.00 MHz... quiet
+Scanning 4800.00 MHz... quiet
+Scanning 5000.00 MHz... quiet
+Scanning 5200.00 MHz... quiet
+Scanning 5400.00 MHz... quiet
+Scanning 5600.00 MHz... quiet
+Scanning 5800.00 MHz... quiet
+Scanning 6000.00 MHz... quiet
+
+=========================================
+SWEEP COMPLETE
+Finished at: Fri Dec  5 04:34:30 PM EST 2025
+=========================================
+
+=== SUMMARY ===
+Total active frequencies found: 2
+
+Active frequencies list:
+=== 732.00 MHz - Fri Dec  5 04:06:30 PM EST 2025 ===
+=== 2440.00 MHz - Fri Dec  5 04:27:30 PM EST 2025 ===
+
+Results saved to: /home/dragon/sweep_results
+Active frequencies: /home/dragon/sweep_results/active_frequencies_20251205_153930.txt
+Main log: /home/dragon/sweep_results/wideband_sweep_20251205_153930.log

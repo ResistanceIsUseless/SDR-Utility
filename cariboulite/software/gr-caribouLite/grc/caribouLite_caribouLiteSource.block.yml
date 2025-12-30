@@ -1,0 +1,77 @@
+id: caribouLite_caribouLiteSource
+label: CaribouLite Source
+category: '[caribouLite]'
+flags: [python,cpp,throttle]
+
+templates:
+  imports: 
+    from gnuradio import caribouLite
+  make: 
+    caribouLite.caribouLiteSource(${channel}, ${enable_agc}, ${rx_gain}, ${rx_bw}, ${sample_rate}, ${freq}, ${provide_meta}, ${pmode_state})
+  
+parameters:
+- id: channel
+  label: S1G(0) or HiF(1)
+  dtype: int
+  default: 0
+
+- id: enable_agc
+  label: Enable AGC
+  dtype: bool
+  default: False
+
+- id: rx_gain
+  label: Rx gain [dB]
+  dtype: float
+  default: 40.0
+
+- id: rx_bw
+  label: Rx bandwidth [Hz]
+  dtype: float
+  default: 2000000.0
+  
+- id: sample_rate
+  label: Sample rate [Hz]
+  dtype: float
+  default: 4000000.0
+
+- id: freq
+  label: Frequency [Hz]
+  dtype: float
+  default: 900000000.0
+
+- id: provide_meta
+  label: output meta data
+  dtype: enum
+  options: ['True', 'False']
+  hide: part
+  default: 'False'
+
+- id: pmode_state
+  label: Pmode state
+  dtype: int
+  default: 0
+
+cpp_templates:
+    includes: ['#include <gnuradio/caribouLite/caribouLiteSource.h>']
+    declarations: 'caribouLite::caribouLiteSource::sptr ${id};'
+    make: 'this->${id} = caribouLite::caribouLiteSource::make(${channel}, ${enable_agc}, ${rx_gain}, ${rx_bw}, ${sample_rate}, ${freq}, ${provide_meta}, ${pmode_state});'
+    packages: ['gnuradio-caribouLite']
+    link: ['gnuradio::gnuradio-caribouLite']
+    translations:
+        'False': 'false'
+        'True': 'true'
+        \[: '{'
+        \]: '}'
+  
+outputs:
+- label: samples
+  domain: stream
+  dtype: complex
+
+- label: meta
+  domain: stream
+  dtype: byte
+  hide: ${False if str(provide_meta)=='True' else True}
+
+file_format: 1

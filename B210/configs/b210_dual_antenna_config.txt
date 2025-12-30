@@ -1,0 +1,115 @@
+═══════════════════════════════════════════════════════
+ B210 DUAL ANTENNA CONFIGURATION
+═══════════════════════════════════════════════════════
+
+Now that you have antennas on BOTH ports:
+- TX/RX port → Antenna 1
+- RX2 port → Antenna 2
+
+You can use BOTH simultaneously!
+
+═══════════════════════════════════════════════════════
+OPTION 1: Single Channel (Easiest to Start)
+═══════════════════════════════════════════════════════
+
+Test RX2 first (dedicated receive port):
+
+In SDR++ UHD Source settings:
+  Device: type=b200
+  Sample Rate: 2400000
+  Channel: 0
+  Antenna: RX2        ← Start here
+  Gain (PGA): 60 dB   ← Adjust 50-70 dB
+
+Tune to 98.5 MHz, mode WFM
+You should see FM signals now!
+
+If RX2 works, then test TX/RX:
+  Change Antenna: TX/RX
+  (Keep everything else the same)
+
+═══════════════════════════════════════════════════════
+OPTION 2: Dual Channel Reception (Advanced)
+═══════════════════════════════════════════════════════
+
+The B210 can receive on BOTH channels simultaneously!
+
+To use both in SDR++:
+1. You may need to configure it via command line args
+2. Or use a tool like GNU Radio to access both channels
+
+For dual-channel SDR++ setup:
+  Device: type=b200
+  In some SDR++ versions, you can specify:
+    subdev=A:A A:B (to use both frontends)
+
+Note: Not all SDR++ builds support dual-channel UHD sources
+
+═══════════════════════════════════════════════════════
+RECOMMENDED SETTINGS FOR FM RADIO (98.5 MHz)
+═══════════════════════════════════════════════════════
+
+Start with RX2 port:
+
+UHD Source Settings:
+├─ Device: type=b200
+├─ Sample Rate: 2400000 (2.4 MSPS)
+├─ Antenna: RX2
+└─ Gain: 60 dB
+
+Radio Settings:
+├─ Frequency: 98500000 (98.5 MHz)
+├─ Mode: WFM
+└─ Bandwidth: 200 kHz
+
+Expected Signal:
+├─ Level: -40 to -80 dBFS
+├─ Clear FM peak in waterfall
+└─ Audio should be clear
+
+═══════════════════════════════════════════════════════
+COMPARING THE TWO ANTENNAS
+═══════════════════════════════════════════════════════
+
+To compare which antenna/port works better:
+
+1. Tune to 98.5 MHz with Antenna: RX2
+   - Note the signal strength (dBFS)
+
+2. Switch to Antenna: TX/RX (without moving)
+   - Note the signal strength again
+
+3. The one with stronger signal (-60 vs -80) is better
+
+Typically RX2 is optimized for receive, but test both!
+
+═══════════════════════════════════════════════════════
+TROUBLESHOOTING
+═══════════════════════════════════════════════════════
+
+Still no signal?
+1. Verify SDR++ is using UHD source (not SoapySDR)
+2. Check gain is 60-70 dB (not 34 like Cariboulite!)
+3. Make sure mode is WFM not NFM
+4. Try increasing sample rate to 3.2 or 4.0 MSPS
+5. Verify antennas are actually connected (check physically)
+
+Signal very weak?
+1. Increase gain to 76 dB (maximum)
+2. Check antenna connections are tight
+3. Try different frequency with known strong station
+4. Verify you're using correct antenna setting in SDR++
+
+═══════════════════════════════════════════════════════
+KEY DIFFERENCES: CARIBOULITE vs B210
+═══════════════════════════════════════════════════════
+
+Cariboulite HiF:
+  - AGC gain: 34
+  - Signal at 98.5: -80 dBFS
+
+B210:
+  - PGA gain: 60-70 dB (different scale!)
+  - Signal at 98.5: Should be -60 to -80 dBFS
+  - Needs higher gain numbers than Cariboulite
+  - More sensitive, wider bandwidth capability

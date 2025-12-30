@@ -1,0 +1,51 @@
+B210 SDR++ Configuration Guide
+================================
+
+FM Radio Band (88-108 MHz) Settings:
+
+1. SOURCE SETTINGS:
+   - Source: UHD
+   - Device: type=b200 (or select "Custom_SDR_B210")
+   - Sample Rate: 2.4 MSPS or 3.2 MSPS (start with 2.4)
+   - Antenna: RX2 (NOT TX/RX since you only have one antenna)
+
+2. GAIN SETTINGS:
+   - The B210 has different gain structure than Cariboulite
+   - Total RX gain range: 0-76 dB
+   - For FM radio, try these settings:
+     * Start with 40-50 dB gain
+     * Adjust until signal is around -40 to -60 dBFS
+   - In SDR++, look for "PGA" gain control
+
+3. FREQUENCY:
+   - Center: 98.5 MHz (for your station)
+   - Make sure you're in the right mode (WFM for FM broadcast)
+
+4. BANDWIDTH:
+   - FM broadcast: 200 kHz per station
+   - Set SDR++ bandwidth to at least 200 kHz
+
+5. TROUBLESHOOTING:
+   - If no signal:
+     a) Check antenna is connected to RX2 port (NOT TX/RX)
+     b) Increase gain to 60-70 dB
+     c) Verify frequency is correct
+     d) Check that UHD is using the right device
+
+   - If signal is weak compared to Cariboulite:
+     The B210 may need higher gain settings
+     Cariboulite's "34 AGC" != B210's gain scale
+     Try 50-70 dB on the B210
+
+6. EXPECTED SIGNAL LEVELS:
+   - Strong FM station: -40 to -60 dBFS
+   - Weak station: -70 to -90 dBFS
+   - Noise floor: -100 to -120 dBFS
+
+7. SAMPLE RATE NOTES:
+   - B210 supports: 200 kHz to 56 MHz
+   - Good starting rates: 2.4, 3.2, 4.0, 8.0 MSPS
+   - Higher rates = more bandwidth but more CPU
+
+Quick Test Command (terminal):
+uhd_fft -f 98.5e6 -s 2.4e6 -g 50 --args="type=b200"

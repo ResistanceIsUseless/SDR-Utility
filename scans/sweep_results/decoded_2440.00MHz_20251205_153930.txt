@@ -1,0 +1,94 @@
+rtl_433 version 25.02 (2025-02-19) inputs file rtl_tcp RTL-SDR SoapySDR
+
+New defaults active, use "-Y classic -s 250k" if you need the old defaults
+
+12-05 16:27:30.154  9975  9975 I [0;36mFPGA caribou_fpga_program_to_fpga@caribou_fpga.c:210 FPGA already operational - not programming (use 'force_prog=true' to force update)[0;37m
+Printing 'findCariboulite' Request:
+    {channel: HiF}
+    {driver: Cariboulite}
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 1 antenna(s): TX/RX 6GHz 
+Found 1 gain(s): Modem AGC 0 - 69 (step 0) 
+Found 1 frequencies: RF 
+Found 1 frequency range(s): 1000000 - 6000000000 (step 0) 
+Found 8 sample rate range(s): 4000000 2000000 1333333 1000000 800000 666667 500000 400000 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Found 4 stream format(s): CS16 CS8 CF32 CF64 
+Found native stream format: CS16 (full scale: 4095.0)
+[103;93m[[30mSoapySDR[93m][0m setSampleRate: using rounded rate 1333000 is deprecated; use 4e6/3 or 1333333.3.
+[102;92m[[30mSDR[92m][0m Tuner set to automatic gain.
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -18.8 dB, adjusting minimum detection level to -15.8 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -22.9 dB, adjusting minimum detection level to -19.9 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -25.5 dB, adjusting minimum detection level to -22.5 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -28.8 dB, adjusting minimum detection level to -25.8 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -30.8 dB, adjusting minimum detection level to -27.8 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -33.3 dB, adjusting minimum detection level to -30.3 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -34.8 dB, adjusting minimum detection level to -31.8 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -36.8 dB, adjusting minimum detection level to -33.8 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -38.5 dB, adjusting minimum detection level to -35.5 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -39.6 dB, adjusting minimum detection level to -36.6 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -41.7 dB, adjusting minimum detection level to -38.7 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -43.3 dB, adjusting minimum detection level to -40.3 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -44.5 dB, adjusting minimum detection level to -41.5 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -46.1 dB, adjusting minimum detection level to -43.1 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -47.3 dB, adjusting minimum detection level to -44.3 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -48.4 dB, adjusting minimum detection level to -45.4 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -49.5 dB, adjusting minimum detection level to -46.5 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -48.3 dB, adjusting minimum detection level to -45.3 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -49.4 dB, adjusting minimum detection level to -46.4 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -48.0 dB, adjusting minimum detection level to -45.0 dB
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+time      : 2025-12-05 16:27:39
+model     : Regency-Remote                         channel   : 15            command   : fan_speed     value     : stop          mic       : CHECKSUM
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -49.0 dB, adjusting minimum detection level to -46.0 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -50.1 dB, adjusting minimum detection level to -47.1 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -47.1 dB, adjusting minimum detection level to -44.1 dB
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+time      : 2025-12-05 16:27:45
+model     : Regency-Remote                         channel   : 11            command   : light_intensity                         value     : 72 %          mic       : CHECKSUM
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -48.5 dB, adjusting minimum detection level to -45.5 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -49.5 dB, adjusting minimum detection level to -46.5 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -50.6 dB, adjusting minimum detection level to -47.6 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -49.4 dB, adjusting minimum detection level to -46.4 dB
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+time      : 2025-12-05 16:27:52
+Model     : Interlogix-Security                    Device Type: unknown      ID        : 000200
+Battery   : 1            Switch1 State: CLOSED     Switch2 State: CLOSED     Switch3 State: CLOSED     Switch4 State: CLOSED     Switch5 State: CLOSED     Raw Message: 008000
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -48.2 dB, adjusting minimum detection level to -45.2 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -49.3 dB, adjusting minimum detection level to -46.3 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -50.4 dB, adjusting minimum detection level to -47.4 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -49.2 dB, adjusting minimum detection level to -46.2 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -50.3 dB, adjusting minimum detection level to -47.3 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -49.0 dB, adjusting minimum detection level to -46.0 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -50.1 dB, adjusting minimum detection level to -47.1 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -48.8 dB, adjusting minimum detection level to -45.8 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -49.9 dB, adjusting minimum detection level to -46.9 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -47.3 dB, adjusting minimum detection level to -44.3 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -48.3 dB, adjusting minimum detection level to -45.3 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -49.4 dB, adjusting minimum detection level to -46.4 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -50.5 dB, adjusting minimum detection level to -47.5 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -49.0 dB, adjusting minimum detection level to -46.0 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -50.0 dB, adjusting minimum detection level to -47.0 dB
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+time      : 2025-12-05 16:28:10
+model     : Acurite-986  id        : 1089
+channel   : 1R           Battery   : 1             temperature: 2.000000 F   Status    : 0             Integrity : CRC
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -48.4 dB, adjusting minimum detection level to -45.4 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -49.6 dB, adjusting minimum detection level to -46.6 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -50.7 dB, adjusting minimum detection level to -47.7 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -49.1 dB, adjusting minimum detection level to -46.1 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -50.2 dB, adjusting minimum detection level to -47.2 dB
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+time      : 2025-12-05 16:28:17
+model     : Fineoffset-WHx080                      Msg type  : 1             Station ID: 251
+Signal Type: WWVB/MSF    Radio Clock: 2165-25-00T45:165:165                  Integrity : CRC
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -51.2 dB, adjusting minimum detection level to -48.2 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -48.0 dB, adjusting minimum detection level to -45.0 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -49.2 dB, adjusting minimum detection level to -46.2 dB
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+time      : 2025-12-05 16:28:28
+model     : Acurite-01185M                         id        : 0
+channel   : 8            Battery   : 1             Integrity : CHECKSUM
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -50.2 dB, adjusting minimum detection level to -47.2 dB
+[102;92m[[30msdr_callback[92m][0m Time expired, exiting!
