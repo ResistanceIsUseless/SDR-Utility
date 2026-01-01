@@ -1,0 +1,121 @@
+{
+  "scan_info": {
+    "location": "Lab Environment",
+    "date": "2025-12-31",
+    "scanner": "USRP B210",
+    "usb_mode": "USB 3.0 SuperSpeed (5000M)",
+    "software": "srsRAN 4G (23.04.0), UHD 4.9.0"
+  },
+  "legitimate_cells": [
+    {
+      "pci": 192,
+      "frequency_mhz": 1935.0,
+      "earfcn": 1950,
+      "band": "LTE Band 2 (1930-1990 MHz)",
+      "duplex_mode": "FDD",
+      "bandwidth_mhz": 10,
+      "prb": 50,
+      "antenna_ports": 4,
+      "cyclic_prefix": "Normal",
+      "phich_length": "Normal",
+      "phich_resources": 1,
+      "sfn": 516,
+      "rsrp_dbm": {
+        "min": 1.2,
+        "max": 18.1,
+        "typical": 10.3
+      },
+      "snr_db": {
+        "min": 0.2,
+        "max": 2.6,
+        "typical": 1.8
+      },
+      "power_dbm": -31.0,
+      "psr": 2.83,
+      "detection_rate_percent": 100,
+      "cfo_hz": 6418.13,
+      "transmission_mode": 2,
+      "mib_decode_success": true,
+      "pdcch_miss_rate_percent": 0.0,
+      "pdsch_bler_percent": 50.0,
+      "pdsch_evm_percent": 1.0,
+      "first_detected": "2025-12-31T20:00:00Z",
+      "last_seen": "2025-12-31T22:04:00Z",
+      "status": "legitimate",
+      "notes": "Stable cell, consistent parameters, 4-port MIMO configuration"
+    },
+    {
+      "pci": 0,
+      "frequency_mhz": 1935.3,
+      "earfcn": 1953,
+      "band": "LTE Band 2 (1930-1990 MHz)",
+      "duplex_mode": "TDD/FDD (fluctuating)",
+      "bandwidth_mhz": 3,
+      "prb": 15,
+      "antenna_ports": 2,
+      "cyclic_prefix": "Normal",
+      "rsrp_dbm": {
+        "min": -20.0,
+        "max": -16.3,
+        "typical": -18.0
+      },
+      "snr_db": {
+        "min": 1.5,
+        "max": 3.6,
+        "typical": 2.5
+      },
+      "power_dbm": -17.5,
+      "psr": {
+        "min": 2.22,
+        "max": 3.61,
+        "typical": 2.85
+      },
+      "detection_rate_percent": {
+        "min": 25,
+        "max": 100,
+        "typical": 67
+      },
+      "cfo_hz": {
+        "min": -1200,
+        "max": 900
+      },
+      "mib_decode_success": true,
+      "mib_decode_attempts": 9,
+      "mib_decode_snr_db": 1.8,
+      "first_detected": "2025-12-31T20:00:00Z",
+      "last_seen": "2025-12-31T22:00:00Z",
+      "status": "legitimate_unstable",
+      "notes": "Signal fluctuates, possible interference or multipath. Cell ID sometimes appears as 81, 129, or 216 due to sync issues."
+    },
+    {
+      "pci": 96,
+      "frequency_mhz": 1935.0,
+      "earfcn": 1950,
+      "band": "LTE Band 2",
+      "duplex_mode": "FDD",
+      "power_dbm": -33.1,
+      "psr": 2.49,
+      "detection_rate_percent": 100,
+      "first_detected": "2025-12-31T22:04:00Z",
+      "last_seen": "2025-12-31T22:04:00Z",
+      "status": "observed",
+      "notes": "Detected during Cell 192 scan, weaker signal, may be adjacent cell"
+    }
+  ],
+  "suspicious_indicators": {
+    "new_cell_threshold_minutes": 60,
+    "power_spike_threshold_db": 10,
+    "detection_rate_drop_threshold_percent": 50,
+    "psr_drop_threshold": 1.5,
+    "encryption_disabled_alert": true,
+    "forced_downgrade_alert": true,
+    "lac_tac_change_alert": true
+  },
+  "monitoring_schedule": {
+    "scan_interval_minutes": 15,
+    "bands_to_monitor": [2, 4, 12, 66],
+    "alert_on_new_cell": true,
+    "alert_on_parameter_change": true
+  },
+  "detection_history": []
+}

@@ -1,0 +1,21 @@
+#
+# srsEPC User Database
+# Format: Name,Auth,IMSI,Key,OP_Type,OP/OPc,AMF,SQN,QCI,IP_alloc
+#
+# Auth: Authentication algorithm (xor/milenage)
+# OP_Type: Operator's code type (OP/OPc)
+# QCI: QoS Class Identifier
+# IP_alloc: IP allocation (dynamic/xxx.xxx.xxx.xxx)
+#
+
+# Test UE 1
+ue1,mil,001010123456789,00112233445566778899aabbccddeeff,opc,63bfa50ee6523365ff14c1f45f88737d,8000,000000000000,9,dynamic
+
+# Test UE 2
+ue2,mil,001010123456790,00112233445566778899aabbccddeeff,opc,63bfa50ee6523365ff14c1f45f88737d,8000,000000000000,9,dynamic
+
+# Test UE 3 - Add your SIM card credentials here
+#ue3,mil,IMSI_FROM_YOUR_SIM,K_FROM_YOUR_SIM,opc,OPC_FROM_YOUR_SIM,8000,000000000000,9,dynamic
+
+# Note: Use 'pySim' tools to extract K and OPC from programmable SIM cards
+# Never add credentials from SIM cards you don't own!
