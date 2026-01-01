@@ -18,6 +18,7 @@ STEP_SIZE=${STEP_SIZE:-1000000}         # 1 MHz steps
 DWELL_TIME=${DWELL_TIME:-0.1}           # 0.1 seconds per frequency
 GAIN=${GAIN:-40}                        # RX gain in dB
 FFT_SIZE=${FFT_SIZE:-2048}              # FFT size
+NUM_PASSES=${NUM_PASSES:-3}             # Number of scan passes (for averaging)
 OUTPUT_DIR=${OUTPUT_DIR:-/home/static/spectrum_scans}
 
 # Create output directory
@@ -42,6 +43,7 @@ OPTIONS:
     -t, --step SIZE      Step size in Hz (default: 1000000 = 1 MHz)
     -d, --dwell TIME     Dwell time per frequency in seconds (default: 0.1)
     -g, --gain GAIN      RX gain in dB (default: 40)
+    -p, --passes NUM     Number of scan passes for averaging (default: 3)
     -o, --output DIR     Output directory (default: ./spectrum_scans)
     -r, --rate RATE      Sample rate in Hz (default: 20000000 = 20 MS/s)
     -h, --help           Show this help
@@ -111,6 +113,10 @@ parse_args() {
                 ;;
             -g|--gain)
                 GAIN="$2"
+                shift 2
+                ;;
+            -p|--passes)
+                NUM_PASSES="$2"
                 shift 2
                 ;;
             -o|--output)
@@ -251,7 +257,8 @@ generate_report() {
     echo "Generating report..."
 
     # Find peak signals (power > -60 dBm)
-    awk -F',' '$2 > -60 && $2 != -999 {print $1 "," $2}' "$csv_file" | \
+    # Handle both old format (power_db) and new format (power_db_avg)
+    awk -F',' 'NR>1 && $2 > -60 && $2 != -999 {print $1 "," $2}' "$csv_file" | \
         sort -t',' -k2 -rn > "$peaks_file"
 
     local num_peaks=$(wc -l < "$peaks_file")
@@ -377,8 +384,8 @@ import time
 import csv
 from datetime import datetime
 
-def scan_spectrum(start_freq, stop_freq, step_size, sample_rate, gain, dwell_time, output_file):
-    """Scan spectrum and save results"""
+def scan_spectrum(start_freq, stop_freq, step_size, sample_rate, gain, dwell_time, num_passes, output_file):
+    """Scan spectrum and save results with multiple passes for averaging"""
 
     # Initialize USRP
     usrp = uhd.usrp.MultiUSRP("type=b200")
@@ -394,10 +401,12 @@ def scan_spectrum(start_freq, stop_freq, step_size, sample_rate, gain, dwell_tim
     num_samps = int(dwell_time * sample_rate)
     recv_buffer = np.zeros(num_samps, dtype=np.complex64)
 
-    # Open output file
-    with open(output_file, 'w', newline='') as f:
-        writer = csv.writer(f)
-        writer.writerow(['frequency_hz', 'power_db', 'timestamp'])
+    # Dictionary to store accumulated power measurements for averaging
+    power_accumulator = {}
+
+    # Perform multiple passes
+    for pass_num in range(num_passes):
+        print(f"\n=== Pass {pass_num + 1}/{num_passes} ===")
 
         freq = start_freq
         total_steps = int((stop_freq - start_freq) / step_size) + 1
@@ -430,9 +439,10 @@ def scan_spectrum(start_freq, stop_freq, step_size, sample_rate, gain, dwell_tim
             else:
                 power_dbm = -999
 
-            # Write to CSV
-            ts = datetime.now().isoformat()
-            writer.writerow([freq, f"{power_dbm:.2f}", ts])
+            # Accumulate power for averaging
+            if freq not in power_accumulator:
+                power_accumulator[freq] = []
+            power_accumulator[freq].append(power_dbm)
 
             # Progress
             print(f"\r[{progress:3.0f}%] {freq/1e6:.3f} MHz: {power_dbm:.1f} dBm     ", end='')
@@ -440,11 +450,29 @@ def scan_spectrum(start_freq, stop_freq, step_size, sample_rate, gain, dwell_tim
 
             freq += step_size
 
-        print("\nScan complete!")
+    # Calculate averages and write to CSV
+    print("\n\nAveraging results across passes...")
+    with open(output_file, 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['frequency_hz', 'power_db_avg', 'power_db_min', 'power_db_max', 'power_db_std', 'num_passes'])
+
+        for freq in sorted(power_accumulator.keys()):
+            powers = [p for p in power_accumulator[freq] if p != -999]
+            if powers:
+                avg_power = np.mean(powers)
+                min_power = np.min(powers)
+                max_power = np.max(powers)
+                std_power = np.std(powers)
+                writer.writerow([freq, f"{avg_power:.2f}", f"{min_power:.2f}",
+                               f"{max_power:.2f}", f"{std_power:.2f}", len(powers)])
+            else:
+                writer.writerow([freq, "-999", "-999", "-999", "0", "0"])
+
+    print("Scan complete!")
 
 if __name__ == "__main__":
-    if len(sys.argv) != 8:
-        print("Usage: fast_scanner.py START STOP STEP RATE GAIN DWELL OUTPUT")
+    if len(sys.argv) != 9:
+        print("Usage: fast_scanner.py START STOP STEP RATE GAIN DWELL PASSES OUTPUT")
         sys.exit(1)
 
     scan_spectrum(
@@ -454,7 +482,8 @@ if __name__ == "__main__":
         float(sys.argv[4]),  # sample_rate
         float(sys.argv[5]),  # gain
         float(sys.argv[6]),  # dwell_time
-        sys.argv[7]          # output_file
+        int(sys.argv[7]),    # num_passes
+        sys.argv[8]          # output_file
     )
 PYEOF
 
@@ -484,6 +513,7 @@ main() {
         python3 "$OUTPUT_DIR/fast_scanner.py" \
             "$START_FREQ" "$STOP_FREQ" "$STEP_SIZE" \
             "$SAMPLE_RATE" "$GAIN" "$DWELL_TIME" \
+            "$NUM_PASSES" \
             "$output_file"
 
         generate_report "$output_file"
