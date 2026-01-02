@@ -16,6 +16,8 @@ Complete toolkit for LTE security research, IMSI catcher detection, and spectrum
 |--------|---------|--------|
 | `cell_monitor.sh` | LTE cell monitoring & IMSI catcher detection | Cell database, alerts |
 | `spectrum_scanner.sh` | Wideband RF spectrum scanner (70 MHz - 6 GHz) | Power measurements, plots |
+| `signal_hunter.sh` | Auto-detect and decode digital radio signals | Decoded audio, logs |
+| `p25_decoder.sh` | P25 Phase 1/2 decoder (conventional & trunking) | Voice audio, metadata |
 
 ### Documentation (`docs/`)
 
@@ -24,6 +26,7 @@ Complete toolkit for LTE security research, IMSI catcher detection, and spectrum
 | `PROJECT_SUMMARY.md` | Complete project overview & status |
 | `defensive_monitoring_guide.md` | IMSI catcher detection guide |
 | `SPECTRUM_SCANNER_GUIDE.md` | Spectrum scanner usage |
+| `SIGNAL_DECODING_GUIDE.md` | P25/DMR/NXDN signal decoding |
 | `lab_enodeb_guide.md` | Lab eNodeB setup (RF-isolated only!) |
 | `usb3_lte_decode_report.md` | USB 3.0 validation & performance |
 
@@ -72,7 +75,22 @@ Scan any frequency range:
 ./spectrum_scanner.sh --start 88e6 --stop 108e6 --step 100e3
 ```
 
-### 3. Lab Testing (RF-Isolated Only!)
+### 3. Signal Decoding (P25/DMR/NXDN)
+
+Auto-detect and decode digital radio signals:
+
+```bash
+# Auto-hunt for P25 in 800 MHz public safety band
+./signal_hunter.sh --start 851e6 --stop 869e6 --mode p25
+
+# Decode specific P25 frequency
+./p25_decoder.sh --freq 851000000 --gain 50
+
+# VHF public safety
+./signal_hunter.sh --start 162e6 --stop 174e6 --mode p25
+```
+
+### 4. Lab Testing (RF-Isolated Only!)
 
 ⚠️ **Requires Faraday cage and own devices only!**
 
@@ -94,10 +112,21 @@ See `docs/lab_enodeb_guide.md` for complete safety procedures.
 - ✅ 70 MHz - 6 GHz coverage (USRP B210 range)
 - ✅ Custom step size (1 Hz to 1 GHz)
 - ✅ Real-time RSSI display
+- ✅ Multi-pass averaging (detect intermittent signals)
+- ✅ Statistical analysis (avg, min, max, std dev)
 - ✅ CSV data export
 - ✅ Peak detection
 - ✅ Automatic band identification
 - ✅ Python fast mode (100x faster)
+
+### Signal Decoding
+- ✅ P25 Phase 1/2 (OP25 integration)
+- ✅ Conventional & trunking modes
+- ✅ Auto-detect and hunt mode
+- ✅ Voice decoding (IMBE vocoder)
+- ✅ DMR/NXDN support (dsdcc)
+- ✅ Automatic signal ranking
+- ✅ Multi-protocol detection
 
 ### Lab Environment
 - ✅ Complete eNodeB + EPC
@@ -119,6 +148,9 @@ See `docs/lab_enodeb_guide.md` for complete safety procedures.
 - srsRAN 4G (23.04.0+)
 - UHD (4.9.0+)
 - Python 3 with UHD bindings (for fast scanning)
+- OP25 (P25 decoder)
+- dsdcc (DMR/NXDN/D-STAR decoder)
+- GNU Radio 3.10+
 - gnuplot (optional, for plots)
 
 ### Installation
@@ -129,6 +161,15 @@ sudo apt-get install srsran
 
 # Install UHD
 sudo apt-get install uhd-host python3-uhd
+
+# Install GNU Radio and decoders
+sudo apt-get install gnuradio gnuradio-dev dsdcc
+
+# Install OP25 (P25 decoder)
+cd /home/static
+git clone https://github.com/boatbod/op25.git
+cd op25
+sudo ./install.sh -f
 
 # Download UHD images
 sudo uhd_images_downloader
@@ -340,14 +381,17 @@ lsusb -t | grep 5000M
 - ✅ MIB decode from 2 cells
 - ✅ PDSCH decode capability
 - ✅ Defensive monitoring system
-- ✅ Wideband spectrum scanner
+- ✅ Wideband spectrum scanner with multi-pass averaging
+- ✅ P25 Phase 1/2 decoder integration (OP25)
+- ✅ Signal hunter (auto-detect & decode)
+- ✅ DMR/NXDN decoder support (dsdcc)
 - ✅ Lab eNodeB setup
 - ✅ Complete documentation
 
 **In Progress:**
 - ⚠️ SIB1 full decode (MIB working, SIB1 partial)
 - ⚠️ Multi-band expansion (currently Band 2)
-- ⚠️ Automated baseline tracking
+- ⚠️ DMR/NXDN decoder wrappers (dsdcc installed, scripts pending)
 
 **Planned:**
 - 🔲 5G NSA/SA support
