@@ -18,6 +18,8 @@ Complete toolkit for LTE security research, IMSI catcher detection, and spectrum
 | `spectrum_scanner.sh` | Wideband RF spectrum scanner (70 MHz - 6 GHz) | Power measurements, plots |
 | `signal_hunter.sh` | Auto-detect and decode digital radio signals | Decoded audio, logs |
 | `p25_decoder.sh` | P25 Phase 1/2 decoder (conventional & trunking) | Voice audio, metadata |
+| `pager_decoder.sh` | POCSAG/FLEX pager decoder | Text messages, capcodes |
+| `ism_decoder.sh` | ISM band device decoder (weather, TPMS, sensors) | Telemetry, device data |
 
 ### Documentation (`docs/`)
 
@@ -27,6 +29,7 @@ Complete toolkit for LTE security research, IMSI catcher detection, and spectrum
 | `defensive_monitoring_guide.md` | IMSI catcher detection guide |
 | `SPECTRUM_SCANNER_GUIDE.md` | Spectrum scanner usage |
 | `SIGNAL_DECODING_GUIDE.md` | P25/DMR/NXDN signal decoding |
+| `TEXT_DATA_DECODING_GUIDE.md` | Pager, P25 data, ISM device decoding |
 | `lab_enodeb_guide.md` | Lab eNodeB setup (RF-isolated only!) |
 | `usb3_lte_decode_report.md` | USB 3.0 validation & performance |
 
@@ -75,7 +78,7 @@ Scan any frequency range:
 ./spectrum_scanner.sh --start 88e6 --stop 108e6 --step 100e3
 ```
 
-### 3. Signal Decoding (P25/DMR/NXDN)
+### 3. Signal Decoding (P25/Pagers/ISM)
 
 Auto-detect and decode digital radio signals:
 
@@ -83,11 +86,14 @@ Auto-detect and decode digital radio signals:
 # Auto-hunt for P25 in 800 MHz public safety band
 ./signal_hunter.sh --start 851e6 --stop 869e6 --mode p25
 
-# Decode specific P25 frequency
-./p25_decoder.sh --freq 851000000 --gain 50
+# Decode POCSAG/FLEX pagers (fire/EMS dispatch)
+./pager_decoder.sh --freq 152007500 --protocol ALL
 
-# VHF public safety
-./signal_hunter.sh --start 162e6 --stop 174e6 --mode p25
+# Decode ISM devices (weather stations, sensors)
+./ism_decoder.sh --freq 433920000
+
+# Auto-hunt for pagers on VHF
+./signal_hunter.sh --start 152e6 --stop 154e6 --mode pager
 ```
 
 ### 4. Lab Testing (RF-Isolated Only!)
@@ -121,9 +127,12 @@ See `docs/lab_enodeb_guide.md` for complete safety procedures.
 
 ### Signal Decoding
 - ✅ P25 Phase 1/2 (OP25 integration)
+- ✅ POCSAG/FLEX pager decoding (multimon-ng)
+- ✅ ISM band devices (rtl_433)
 - ✅ Conventional & trunking modes
 - ✅ Auto-detect and hunt mode
 - ✅ Voice decoding (IMBE vocoder)
+- ✅ Text/data message extraction
 - ✅ DMR/NXDN support (dsdcc)
 - ✅ Automatic signal ranking
 - ✅ Multi-protocol detection
@@ -149,6 +158,8 @@ See `docs/lab_enodeb_guide.md` for complete safety procedures.
 - UHD (4.9.0+)
 - Python 3 with UHD bindings (for fast scanning)
 - OP25 (P25 decoder)
+- multimon-ng (pager decoder)
+- rtl_433 (ISM band decoder)
 - dsdcc (DMR/NXDN/D-STAR decoder)
 - GNU Radio 3.10+
 - gnuplot (optional, for plots)
@@ -163,7 +174,7 @@ sudo apt-get install srsran
 sudo apt-get install uhd-host python3-uhd
 
 # Install GNU Radio and decoders
-sudo apt-get install gnuradio gnuradio-dev dsdcc
+sudo apt-get install gnuradio gnuradio-dev dsdcc multimon-ng rtl-433
 
 # Install OP25 (P25 decoder)
 cd /home/static
@@ -383,7 +394,10 @@ lsusb -t | grep 5000M
 - ✅ Defensive monitoring system
 - ✅ Wideband spectrum scanner with multi-pass averaging
 - ✅ P25 Phase 1/2 decoder integration (OP25)
-- ✅ Signal hunter (auto-detect & decode)
+- ✅ POCSAG/FLEX pager decoding (multimon-ng)
+- ✅ ISM band device decoding (rtl_433)
+- ✅ Signal hunter (auto-detect & decode all protocols)
+- ✅ Text/data message extraction (P25 SDS, pagers)
 - ✅ DMR/NXDN decoder support (dsdcc)
 - ✅ Lab eNodeB setup
 - ✅ Complete documentation

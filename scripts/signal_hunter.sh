@@ -9,6 +9,8 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SPECTRUM_SCANNER="$SCRIPT_DIR/spectrum_scanner.sh"
 P25_DECODER="$SCRIPT_DIR/p25_decoder.sh"
+PAGER_DECODER="$SCRIPT_DIR/pager_decoder.sh"
+ISM_DECODER="$SCRIPT_DIR/ism_decoder.sh"
 OUTPUT_DIR="/home/static/spectrum_scans"
 
 # Default parameters
@@ -35,12 +37,14 @@ OPTIONS:
     -T, --threshold DB   Power threshold in dBm (default: -60)
     -d, --dwell SEC      Dwell time per frequency (default: 0.2)
     -p, --passes NUM     Number of scan passes (default: 5)
-    -m, --mode MODE      Decoder mode: p25, dmr, nxdn, auto (default: p25)
+    -m, --mode MODE      Decoder mode: p25, pager, ism, dmr, nxdn, auto (default: p25)
     -o, --output DIR     Output directory (default: ./spectrum_scans)
     -h, --help           Show this help
 
 MODES:
     p25      - Decode as P25 Phase 1/2
+    pager    - Decode POCSAG/FLEX pagers
+    ism      - Decode 433 MHz ISM devices (weather, TPMS, sensors)
     dmr      - Decode as DMR
     nxdn     - Decode as NXDN
     auto     - Auto-detect modulation (future)
@@ -51,6 +55,12 @@ EXAMPLES:
 
     # Hunt for VHF public safety (P25)
     $0 --start 162000000 --stop 174000000 --mode p25
+
+    # Hunt for pagers on VHF
+    $0 --start 152000000 --stop 154000000 --mode pager --step 12500
+
+    # Find ISM devices on 433 MHz
+    $0 --start 433800000 --stop 434100000 --mode ism --step 50000
 
     # Fast scan with lower threshold
     $0 --passes 3 --threshold -55 --step 12500
@@ -114,11 +124,11 @@ done
 
 # Validate decoder mode
 case "$MODE" in
-    p25|dmr|nxdn|auto)
+    p25|pager|ism|dmr|nxdn|auto)
         ;;
     *)
         echo "ERROR: Invalid mode '$MODE'"
-        echo "Valid modes: p25, dmr, nxdn, auto"
+        echo "Valid modes: p25, pager, ism, dmr, nxdn, auto"
         exit 1
         ;;
 esac
@@ -216,6 +226,18 @@ echo "$SIGNALS" | while IFS=',' read -r freq power; do
             echo "(Press Ctrl+C to skip to next frequency)"
             echo ""
             "$P25_DECODER" --freq "$freq" --gain 50 || true
+            ;;
+        pager)
+            echo "Starting POCSAG/FLEX pager decoder..."
+            echo "(Press Ctrl+C to skip to next frequency)"
+            echo ""
+            "$PAGER_DECODER" --freq "$freq" --gain 40 --protocol ALL || true
+            ;;
+        ism)
+            echo "Starting ISM device decoder..."
+            echo "(Press Ctrl+C to skip to next frequency)"
+            echo ""
+            "$ISM_DECODER" --freq "$freq" --gain 40 || true
             ;;
         dmr)
             echo "DMR decoding not yet implemented"
