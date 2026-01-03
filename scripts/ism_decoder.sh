@@ -143,8 +143,8 @@ echo "Listening for ISM devices... (Press Ctrl+C to stop)"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 
-# Build rx_sdr command for USRP
-RX_CMD="rx_sdr -d driver=uhd,type=b200 -s $SAMPLE_RATE -f $FREQ -g $GAIN -F CS16 -"
+# Build UHD rx command for USRP
+RX_CMD="uhd_rx_cfile -f $FREQ -r $SAMPLE_RATE -g $GAIN --args type=b200 -"
 
 # Build rtl_433 command
 RTL433_OPTS="-F $OUTPUT_FORMAT"

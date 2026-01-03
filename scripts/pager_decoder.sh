@@ -126,8 +126,8 @@ echo "Listening for pages... (Press Ctrl+C to stop)"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 
-# Build rx_sdr command for USRP
-RX_CMD="rx_sdr -d driver=uhd,type=b200 -s $SAMPLE_RATE -f $FREQ -g $GAIN -F CF32 -"
+# Build UHD rx command for USRP
+RX_CMD="uhd_rx_cfile -f $FREQ -r $SAMPLE_RATE -g $GAIN --args type=b200 -"
 
 # Build multimon-ng command
 if [ -n "$LOG_FILE" ]; then
