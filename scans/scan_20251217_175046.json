@@ -1,0 +1,11 @@
+{
+  "scan_parameters": {
+    "sample_rate": 2000000.0,
+    "fft_size": 2048,
+    "gain": 40,
+    "timestamp": "2025-12-17T17:50:46.987024"
+  },
+  "results": [
+    {
+      "center_freq": 88000000.0,
+      "frequencies": 

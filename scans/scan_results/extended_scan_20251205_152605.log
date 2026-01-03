@@ -1,0 +1,300 @@
+=== CaribouLite Extended Frequency Scanner ===
+Started at: Fri Dec  5 03:26:05 PM EST 2025
+Output directory: /home/dragon/scan_results
+
+=========================================
+CYCLE 1 of 5 - Fri Dec  5 03:26:05 PM EST 2025
+=========================================
+
+-----------------------------------
+Cycle 1 - Scanning ISM_US_315MHz at 315M for 30s
+Time: 15:26:05
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+time      : 2025-12-05 15:26:09
+model     : Secplus-v1   id        : 0
+ID_0      : 0            ID_1      : 0             Switch-ID : 0             Pin       :               Fixed_Code: 774840978     Rolling_Code: 2458511592
+Decoded messages: 1
+
+-----------------------------------
+Cycle 1 - Scanning ISM_EU_433MHz at 433.92M for 30s
+Time: 15:26:38
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 2000000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 1 - Scanning FM_Radio at 100M for 25s
+Time: 15:27:10
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 1 - Scanning Aviation_Emergency at 121.5M for 30s
+Time: 15:27:37
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 1 - Scanning Weather_Sat_NOAA at 137.5M for 25s
+Time: 15:28:09
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 1 - Scanning Weather_Radio_NOAA at 162.4M for 30s
+Time: 15:28:36
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 1 - Scanning ISM_EU_868MHz at 868M for 25s
+Time: 15:29:08
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 1 - Scanning ISM_US_915MHz at 915M for 25s
+Time: 15:29:35
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 1 - Scanning ADS-B_Aircraft at 1090M for 30s
+Time: 15:30:02
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 1 - Scanning WiFi_ISM_2.4GHz at 2.4G for 25s
+Time: 15:30:34
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+
+Completed cycle 1 at Fri Dec  5 03:31:01 PM EST 2025
+
+Pausing 5 seconds before next cycle...
+=========================================
+CYCLE 2 of 5 - Fri Dec  5 03:31:06 PM EST 2025
+=========================================
+
+-----------------------------------
+Cycle 2 - Scanning ISM_US_315MHz at 315M for 30s
+Time: 15:31:06
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+time      : 2025-12-05 15:31:12
+model     : Secplus-v1   id        : 0
+ID_0      : 0            ID_1      : 0             Switch-ID : 0             Pin       : 0033          Fixed_Code: 1948617       Rolling_Code: 2506555392
+time      : 2025-12-05 15:31:27
+model     : Secplus-v1   id        : 0
+ID_0      : 0            ID_1      : 0             Switch-ID : 0             Pin       :               Fixed_Code: 775254321     Rolling_Code: 1766340840
+Decoded messages: 2
+
+-----------------------------------
+Cycle 2 - Scanning ISM_EU_433MHz at 433.92M for 30s
+Time: 15:31:38
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 2 - Scanning FM_Radio at 100M for 25s
+Time: 15:32:10
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 2 - Scanning Aviation_Emergency at 121.5M for 30s
+Time: 15:32:37
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 2 - Scanning Weather_Sat_NOAA at 137.5M for 25s
+Time: 15:33:09
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 2 - Scanning Weather_Radio_NOAA at 162.4M for 30s
+Time: 15:33:36
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 2 - Scanning ISM_EU_868MHz at 868M for 25s
+Time: 15:34:08
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 2 - Scanning ISM_US_915MHz at 915M for 25s
+Time: 15:34:35
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 2 - Scanning ADS-B_Aircraft at 1090M for 30s
+Time: 15:35:02
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 2 - Scanning WiFi_ISM_2.4GHz at 2.4G for 25s
+Time: 15:35:34
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+
+Completed cycle 2 at Fri Dec  5 03:36:01 PM EST 2025
+
+Pausing 5 seconds before next cycle...
+=========================================
+CYCLE 3 of 5 - Fri Dec  5 03:36:06 PM EST 2025
+=========================================
+
+-----------------------------------
+Cycle 3 - Scanning ISM_US_315MHz at 315M for 30s
+Time: 15:36:06
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+time      : 2025-12-05 15:36:23
+model     : Sharp-SPC775 id        : 3
+Battery   : 1            Temperature: 6.4 C        Humidity  : 192 %         Integrity : CRC
+time      : 2025-12-05 15:36:34
+model     : Sharp-SPC775 id        : 128
+Battery   : 0            Temperature: 0.0 C        Humidity  : 0 %           Integrity : CRC
+Decoded messages: 2
+
+-----------------------------------
+Cycle 3 - Scanning ISM_EU_433MHz at 433.92M for 30s
+Time: 15:36:38
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 3 - Scanning FM_Radio at 100M for 25s
+Time: 15:37:10
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 3 - Scanning Aviation_Emergency at 121.5M for 30s
+Time: 15:37:37
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 3 - Scanning Weather_Sat_NOAA at 137.5M for 25s
+Time: 15:38:09
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 3 - Scanning Weather_Radio_NOAA at 162.4M for 30s
+Time: 15:38:36
+-----------------------------------
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Decoded messages: 0
+0
+
+-----------------------------------
+Cycle 3 - Scanning ISM_EU_868MHz at 868M for 25s
+Time: 15:39:08
+-----------------------------------

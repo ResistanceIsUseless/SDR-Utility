@@ -16,8 +16,7 @@ START_FREQ=${START_FREQ:-70000000}      # 70 MHz
 STOP_FREQ=${STOP_FREQ:-6000000000}      # 6 GHz
 STEP_SIZE=${STEP_SIZE:-1000000}         # 1 MHz steps
 DWELL_TIME=${DWELL_TIME:-0.1}           # 0.1 seconds per frequency
-GAIN=${GAIN:-50}                        # RX gain in dB
-ANTENNA=${ANTENNA:-RX2}                 # Antenna port (RX2 or TX/RX)
+GAIN=${GAIN:-40}                        # RX gain in dB
 FFT_SIZE=${FFT_SIZE:-2048}              # FFT size
 NUM_PASSES=${NUM_PASSES:-3}             # Number of scan passes (for averaging)
 OUTPUT_DIR=${OUTPUT_DIR:-/home/static/spectrum_scans}
@@ -43,8 +42,7 @@ OPTIONS:
     -e, --stop FREQ      Stop frequency in Hz (default: 6000000000 = 6 GHz)
     -t, --step SIZE      Step size in Hz (default: 1000000 = 1 MHz)
     -d, --dwell TIME     Dwell time per frequency in seconds (default: 0.1)
-    -g, --gain GAIN      RX gain in dB (default: 50)
-    -a, --antenna ANT    Antenna port: RX2 or TX/RX (default: RX2)
+    -g, --gain GAIN      RX gain in dB (default: 40)
     -p, --passes NUM     Number of scan passes for averaging (default: 3)
     -o, --output DIR     Output directory (default: ./spectrum_scans)
     -r, --rate RATE      Sample rate in Hz (default: 20000000 = 20 MS/s)
@@ -115,10 +113,6 @@ parse_args() {
                 ;;
             -g|--gain)
                 GAIN="$2"
-                shift 2
-                ;;
-            -a|--antenna)
-                ANTENNA="$2"
                 shift 2
                 ;;
             -p|--passes)
@@ -390,14 +384,13 @@ import time
 import csv
 from datetime import datetime
 
-def scan_spectrum(start_freq, stop_freq, step_size, sample_rate, gain, antenna, dwell_time, num_passes, output_file):
+def scan_spectrum(start_freq, stop_freq, step_size, sample_rate, gain, dwell_time, num_passes, output_file):
     """Scan spectrum and save results with multiple passes for averaging"""
 
     # Initialize USRP
     usrp = uhd.usrp.MultiUSRP("type=b200")
     usrp.set_rx_rate(sample_rate)
     usrp.set_rx_gain(gain)
-    usrp.set_rx_antenna(antenna)  # Antenna port configurable via -a option
     usrp.set_rx_bandwidth(sample_rate)
 
     # Stream args
@@ -478,8 +471,8 @@ def scan_spectrum(start_freq, stop_freq, step_size, sample_rate, gain, antenna, 
     print("Scan complete!")
 
 if __name__ == "__main__":
-    if len(sys.argv) != 10:
-        print("Usage: fast_scanner.py START STOP STEP RATE GAIN ANTENNA DWELL PASSES OUTPUT")
+    if len(sys.argv) != 9:
+        print("Usage: fast_scanner.py START STOP STEP RATE GAIN DWELL PASSES OUTPUT")
         sys.exit(1)
 
     scan_spectrum(
@@ -488,10 +481,9 @@ if __name__ == "__main__":
         int(sys.argv[3]),    # step_size
         float(sys.argv[4]),  # sample_rate
         float(sys.argv[5]),  # gain
-        sys.argv[6],         # antenna
-        float(sys.argv[7]),  # dwell_time
-        int(sys.argv[8]),    # num_passes
-        sys.argv[9]          # output_file
+        float(sys.argv[6]),  # dwell_time
+        int(sys.argv[7]),    # num_passes
+        sys.argv[8]          # output_file
     )
 PYEOF
 
@@ -520,8 +512,8 @@ main() {
 
         python3 "$OUTPUT_DIR/fast_scanner.py" \
             "$START_FREQ" "$STOP_FREQ" "$STEP_SIZE" \
-            "$SAMPLE_RATE" "$GAIN" "$ANTENNA" \
-            "$DWELL_TIME" "$NUM_PASSES" \
+            "$SAMPLE_RATE" "$GAIN" "$DWELL_TIME" \
+            "$NUM_PASSES" \
             "$output_file"
 
         generate_report "$output_file"

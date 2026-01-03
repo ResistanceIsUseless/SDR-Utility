@@ -1,0 +1,88 @@
+rtl_433 version 25.02 (2025-02-19) inputs file rtl_tcp RTL-SDR SoapySDR
+12-05 16:06:30.145  7972  7972 I [0;36mFPGA caribou_fpga_program_to_fpga@caribou_fpga.c:210 FPGA already operational - not programming (use 'force_prog=true' to force update)[0;37m
+Printing 'findCariboulite' Request:
+    {channel: HiF}
+    {driver: Cariboulite}
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 1 antenna(s): TX/RX 6GHz 
+Found 1 gain(s): Modem AGC 0 - 69 (step 0) 
+Found 1 frequencies: RF 
+Found 1 frequency range(s): 1000000 - 6000000000 (step 0) 
+Found 8 sample rate range(s): 4000000 2000000 1333333 1000000 800000 666667 500000 400000 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Found 4 stream format(s): CS16 CS8 CF32 CF64 
+Found native stream format: CS16 (full scale: 4095.0)
+[103;93m[[30mSoapySDR[93m][0m setSampleRate: using rounded rate 1333000 is deprecated; use 4e6/3 or 1333333.3.
+[102;92m[[30mSDR[92m][0m Tuner set to automatic gain.
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -16.9 dB, adjusting minimum detection level to -13.9 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -18.5 dB, adjusting minimum detection level to -15.5 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -19.8 dB, adjusting minimum detection level to -16.8 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -21.2 dB, adjusting minimum detection level to -18.2 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -23.1 dB, adjusting minimum detection level to -20.1 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -24.9 dB, adjusting minimum detection level to -21.9 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -26.0 dB, adjusting minimum detection level to -23.0 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -27.1 dB, adjusting minimum detection level to -24.1 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -28.9 dB, adjusting minimum detection level to -25.9 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -30.2 dB, adjusting minimum detection level to -27.2 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -31.2 dB, adjusting minimum detection level to -28.2 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -32.2 dB, adjusting minimum detection level to -29.2 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -33.3 dB, adjusting minimum detection level to -30.3 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -32.0 dB, adjusting minimum detection level to -29.0 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -33.0 dB, adjusting minimum detection level to -30.0 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -31.9 dB, adjusting minimum detection level to -28.9 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -32.9 dB, adjusting minimum detection level to -29.9 dB
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+time      : 2025-12-05 16:06:43
+model     : Acurite-986  id        : 65535
+channel   : 1R           Battery   : 1             temperature: -94.000000 F Status    : 60            Integrity : CRC
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -31.6 dB, adjusting minimum detection level to -28.6 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -32.6 dB, adjusting minimum detection level to -29.6 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -33.7 dB, adjusting minimum detection level to -30.7 dB
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+time      : 2025-12-05 16:06:48
+model     : HT680-Remote Address   : 0x0B6DA8
+Button 1  :              Button 2  :               Button 3  :               Button 4  :               Tristate code: Z1XZ1XZZZ01Z0ZZX0X
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+time      : 2025-12-05 16:06:48
+model     : HT680-Remote Address   : 0x0B0ADA
+Button 1  :              Button 2  :               Button 3  :               Button 4  :               Tristate code: Z100ZZ1XZZ0ZZ10ZZZ
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -32.7 dB, adjusting minimum detection level to -29.7 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -31.5 dB, adjusting minimum detection level to -28.5 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -30.4 dB, adjusting minimum detection level to -27.4 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -31.4 dB, adjusting minimum detection level to -28.4 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -30.1 dB, adjusting minimum detection level to -27.1 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -31.4 dB, adjusting minimum detection level to -28.4 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -32.5 dB, adjusting minimum detection level to -29.5 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -31.5 dB, adjusting minimum detection level to -28.5 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -32.5 dB, adjusting minimum detection level to -29.5 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -33.6 dB, adjusting minimum detection level to -30.6 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -32.4 dB, adjusting minimum detection level to -29.4 dB
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+time      : 2025-12-05 16:07:12
+model     : HT680-Remote Address   : 0x0D6DBF
+Button 1  :              Button 2  : PRESSED       Button 3  : PRESSED       Button 4  :               Tristate code: 1XXZ1XZ111ZZ101ZZ0
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+time      : 2025-12-05 16:07:13
+model     : Acurite-986  id        : 32711
+channel   : 2F           Battery   : 0             temperature: 91.000000 F  Status    : 1             Integrity : CRC
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -33.5 dB, adjusting minimum detection level to -30.5 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -31.8 dB, adjusting minimum detection level to -28.8 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -30.8 dB, adjusting minimum detection level to -27.8 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -31.9 dB, adjusting minimum detection level to -28.9 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -33.1 dB, adjusting minimum detection level to -30.1 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -34.1 dB, adjusting minimum detection level to -31.1 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -33.0 dB, adjusting minimum detection level to -30.0 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -34.1 dB, adjusting minimum detection level to -31.1 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -33.0 dB, adjusting minimum detection level to -30.0 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -31.8 dB, adjusting minimum detection level to -28.8 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -32.9 dB, adjusting minimum detection level to -29.9 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -34.0 dB, adjusting minimum detection level to -31.0 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -32.9 dB, adjusting minimum detection level to -29.9 dB
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+time      : 2025-12-05 16:07:29
+model     : Regency-Remote                         channel   : 15            command   : light_intensity                         value     : 64 %          mic       : CHECKSUM
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+time      : 2025-12-05 16:07:29
+model     : Regency-Remote                         channel   : 15            command   : fan_speed     value     : stop          mic       : CHECKSUM
+[102;92m[[30msdr_callback[92m][0m Time expired, exiting!

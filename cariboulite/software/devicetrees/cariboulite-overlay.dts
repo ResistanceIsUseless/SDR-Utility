@@ -1,0 +1,46 @@
+// Description: Overlay to enable character device interface for SMI.
+// Original Author:	Luke Wren <luke@raspberrypi.org>
+// Adaptation to CaribouLite: David Michaeli (cariboulabs.co@gmail.com)
+
+
+/dts-v1/;
+/plugin/;
+
+/{
+	compatible = "brcm,bcm2835";
+
+	fragment@0 {
+		target = <&soc>;
+		__overlay__ {
+			smi_dev {
+				compatible = "brcm,bcm2835-smi-dev";
+				smi_handle = <&smi>;
+				status = "okay";
+			};
+		};
+	};
+
+	fragment@1 {
+		target = <&smi>;
+		__overlay__ {
+			pinctrl-names = "default";
+			pinctrl-0 = <&smi_pins>;
+			status = "okay";
+			/* assigned-clock-rates = <500000000>; */
+		};
+	};
+
+	fragment@2 {
+		target = <&gpio>;
+		__overlay__ {
+			smi_pins: smi_pins {
+				/* Don't configure the top two address bits, as these are already used as ID_SD and ID_SC */
+				brcm,pins = 	  <2 3 6 7 8 9 10 11 12 13 14 15 24 25>;
+				brcm,function =   <5 5 5 5 5 5 5  5  5  5  5  5  5  5>;
+
+				/* /CS, /WE and /OE are pulled high, as they are generally active low signals */
+				brcm,pull = 	  <2 2 2 2 0 0  0  0  0  0  0  0  0  0>;
+			};
+		};
+	};
+};

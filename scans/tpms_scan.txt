@@ -1,0 +1,37 @@
+rtl_433 version 25.02 (2025-02-19) inputs file rtl_tcp RTL-SDR SoapySDR
+12-05 15:12:46.068  3507  3507 I [0;36mFPGA caribou_fpga_program_to_fpga@caribou_fpga.c:210 FPGA already operational - not programming (use 'force_prog=true' to force update)[0;37m
+Printing 'findCariboulite' Request:
+    {channel: HiF}
+    {driver: Cariboulite}
+Using device Cariboulite Rev2.8: device_id=0 fpga_revision=1 hardware_revision=0x0001 product_name=CaribouLite RPI Hat serial_number=2461461835 vendor_name=CaribouLabs LTD 
+Found 1 antenna(s): TX/RX 6GHz 
+Found 1 gain(s): Modem AGC 0 - 69 (step 0) 
+Found 1 frequencies: RF 
+Found 1 frequency range(s): 1000000 - 6000000000 (step 0) 
+Found 8 sample rate range(s): 4000000 2000000 1333333 1000000 800000 666667 500000 400000 
+Found 15 bandwidth range(s): 20000 - 20000 (step 0) 50000 - 50000 (step 0) 100000 - 100000 (step 0) 160000 - 160000 (step 0) 200000 - 200000 (step 0) 250000 - 250000 (step 0) 320000 - 320000 (step 0) 400000 - 400000 (step 0) 500000 - 500000 (step 0) 630000 - 630000 (step 0) 800000 - 800000 (step 0) 1000000 - 1000000 (step 0) 1250000 - 1250000 (step 0) 1600000 - 1600000 (step 0) 2000000 - 2000000 (step 0) 
+Found current bandwidth 160000
+Found 4 stream format(s): CS16 CS8 CF32 CF64 
+Found native stream format: CS16 (full scale: 4095.0)
+[103;93m[[30mSoapySDR[93m][0m setSampleRate: using rounded rate 1333000 is deprecated; use 4e6/3 or 1333333.3.
+[102;92m[[30mSDR[92m][0m Tuner set to automatic gain.
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -20.6 dB, adjusting minimum detection level to -17.6 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -25.3 dB, adjusting minimum detection level to -22.3 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -29.4 dB, adjusting minimum detection level to -26.4 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -32.9 dB, adjusting minimum detection level to -29.9 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -36.0 dB, adjusting minimum detection level to -33.0 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -38.7 dB, adjusting minimum detection level to -35.7 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -41.1 dB, adjusting minimum detection level to -38.1 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -43.2 dB, adjusting minimum detection level to -40.2 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -45.0 dB, adjusting minimum detection level to -42.0 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -46.6 dB, adjusting minimum detection level to -43.6 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -48.0 dB, adjusting minimum detection level to -45.0 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -49.2 dB, adjusting minimum detection level to -46.2 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -50.3 dB, adjusting minimum detection level to -47.3 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -52.0 dB, adjusting minimum detection level to -49.0 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -53.4 dB, adjusting minimum detection level to -50.4 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -54.4 dB, adjusting minimum detection level to -51.4 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -55.5 dB, adjusting minimum detection level to -52.5 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -56.6 dB, adjusting minimum detection level to -53.6 dB
+[103;93m[[30mAuto Level[93m][0m Estimated noise level is -57.6 dB, adjusting minimum detection level to -54.6 dB
+[102;92m[[30msdr_callback[92m][0m Time expired, exiting!
