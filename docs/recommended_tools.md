@@ -140,3 +140,16 @@ rtl_fm -d driver=Cariboulite,channel=HiF -M fm -f 144.39M -s 22050 | direwolf -r
 # Check gpredict for next NOAA-15/18/19 pass
 # Then run appropriate decoder from gr-satellites
 ```
+### Additional Tools
+- https://github.com/asset-group/5ghoul-5g-nr-attacks
+- https://github.com/bemasher/rtlamr
+- https://github.com/smittix/intercept
+- https://github.com/Oros42/IMSI-catcher
+- https://github.com/fgsect/scat
+- https://github.com/muccc/gr-iridium
+- https://github.com/muccc/iridium-toolkit
+- https://github.com/EttusResearch/uhd
+- https://github.com/srsran/srsran_project
+- https://github.com/PentHertz/Modmobmap
+- https://github.com/PentHertz/RF-Swift
+  
