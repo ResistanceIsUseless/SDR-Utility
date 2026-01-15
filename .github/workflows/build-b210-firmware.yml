@@ -1,0 +1,95 @@
+name: Build B210 Fixed Firmware
+
+on:
+  workflow_dispatch:  # Manual trigger
+  push:
+    paths:
+      - 'B210/firmware/**/*.v'
+      - 'B210/firmware/**/*.vhd'
+      - '.github/workflows/build-b210-firmware.yml'
+
+jobs:
+  build-firmware:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        lfs: true  # For large firmware files
+
+    - name: Free up disk space
+      run: |
+        sudo rm -rf /usr/share/dotnet
+        sudo rm -rf /opt/ghc
+        sudo rm -rf /usr/local/share/boost
+        sudo df -h
+
+    - name: Install Xilinx Vivado
+      run: |
+        echo "Note: Vivado requires license and is >20GB"
+        echo "Alternative: Use pre-built Docker container with Vivado"
+        echo "For now, we'll document the build process"
+
+        # Option 1: Use xilinx/vivado Docker container (if available)
+        # docker pull xilinx/vivado:2024.1
+
+        # Option 2: Install Vivado (requires Xilinx account)
+        # wget https://www.xilinx.com/member/forms/download/xef.html?filename=...
+        # This step needs to be customized with actual download link
+
+    - name: Apply float32 fix
+      run: |
+        chmod +x B210/scripts/fix_float32_firmware.sh
+        ./B210/scripts/fix_float32_firmware.sh
+
+    - name: Build firmware with Vivado
+      run: |
+        # This would be the actual build command:
+        # cd "B210/firmware/Kintex-7 USRP_B210/固件源工程/B210_Project_Firmwire"
+        # vivado -mode batch -source build.tcl
+
+        echo "Build step requires Vivado installation"
+        echo "See documentation for manual build process"
+
+    - name: Convert bitstream to binary
+      if: success()
+      run: |
+        # Convert .bit to .bin format
+        # This requires Vivado tools
+        echo "Conversion step"
+
+    - name: Upload firmware artifact
+      if: success()
+      uses: actions/upload-artifact@v4
+      with:
+        name: b210-fixed-firmware
+        path: |
+          B210/firmware/**/b200.bit
+          B210/firmware/**/b200.bin
+        retention-days: 90
+
+    - name: Create release
+      if: github.ref == 'refs/heads/main' && success()
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: firmware-${{ github.sha }}
+        files: |
+          B210/firmware/**/b200.bin
+        body: |
+          # B210 Fixed Firmware
+
+          ## Changes
+          - Fixed float32 conversion bug in iq_to_float.v
+          - Corrected IEEE 754 exponent calculation
+
+          ## Installation
+          ```bash
+          cp b200.bin /opt/homebrew/share/uhd/images/usrp_b210_fpga.bin
+          ```
+
+          ## Testing
+          ```bash
+          rx_samples_to_file --freq 93.7e6 --rate 2e6 --gain 50 \
+            --ant RX2 --duration 2 --file test.dat
+          ```
