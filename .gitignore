@@ -1,0 +1,57 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Large firmware files
+*.zip
+*.bin
+*.bit
+*.dcp
+*.mif
+*.edif
+*.ngc
+
+# Vivado/FPGA build artifacts
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/
+*.xpr.lock
+vivado*.jou
+vivado*.log
+webtalk*.xml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+
+# Compiled files
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.dll
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# RF captures (large binary files)
+*.dat
+*.cfile
+*.raw
+*.complex
+*.iq
