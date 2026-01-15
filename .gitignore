@@ -3,8 +3,8 @@
 .AppleDouble
 .LSOverride
 
-# Large firmware files
-*.zip
+# Large firmware files (managed by Git LFS)
+# *.zip files are now tracked with Git LFS
 *.bin
 *.bit
 *.dcp
