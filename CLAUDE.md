@@ -39,10 +39,10 @@ rx_samples_to_file --freq 93.7e6 --rate 2e6 --gain 50 --ant RX2 --type short --d
 benchmark_rate --rx_rate 20e6 --tx_rate 20e6 --duration 30
 
 # Analyze captured data
-python3 B210/scripts/analyze_with_dc_removal_pure.py /path/to/capture.dat
+python3 scripts/sdr/analyze_with_dc_removal_pure.py /path/to/capture.dat
 
 # Auto-optimize settings
-./B210/scripts/auto_optimize.sh
+./scripts/uhd/auto_optimize.sh
 ```
 
 ### CaribouLite Operations (Raspberry Pi)
@@ -77,11 +77,37 @@ SoapySDRUtil --probe
 
 ## Project Structure
 
-- `B210/` - USRP B210 Clone configs, scripts, firmware, and XC7K325T FPGA documentation
-- `cariboulite/` - Complete CaribouLite SDR source (hardware, firmware, software, GNU Radio)
-- `scripts/` - Utility scripts organized by tool (rtl433, kismet, catsniffer, rf-tools, killerbee)
-- `scans/` - RF spectrum scan results (315/433/915 MHz, TPMS)
-- `docs/` - Cellular research guides, tool recommendations
+```
+SDR-Utility/
+├── B210/                    # B210 Clone documentation and setup
+│   ├── scripts/
+│   │   ├── setup/          # One-time setup/install scripts
+│   │   └── firmware/       # Firmware fixes and installation
+│   ├── firmware/           # Clone firmware files (Git LFS)
+│   └── *.md                # Documentation
+│
+├── cariboulite/            # Complete CaribouLite source
+│
+├── scripts/                # Operational scripts (organized by use)
+│   ├── uhd/               # UHD/B210 testing & optimization
+│   ├── sdr/               # Generic SDR analysis (any hardware)
+│   ├── rtl433/            # ISM band decoders
+│   ├── kismet/            # Wireless monitoring
+│   ├── catsniffer/        # BLE/Zigbee/Thread tools
+│   ├── rf-tools/          # General RF utilities
+│   └── killerbee/         # Zigbee security tools
+│
+├── scans/                 # RF scan results
+└── docs/                  # Research guides
+```
+
+### Script Organization Philosophy
+
+- **B210/scripts/setup/** - Install dependencies, configure drivers (run once)
+- **B210/scripts/firmware/** - Firmware patching and installation
+- **scripts/uhd/** - Daily use scripts for UHD devices (testing, optimization)
+- **scripts/sdr/** - Hardware-agnostic analysis tools (work with any SDR)
+- **scripts/{tool}/** - Tool-specific workflows (rtl_433, kismet, etc.)
 
 ## B210 Clone-Specific Notes
 
@@ -121,7 +147,7 @@ Install to: `/opt/homebrew/share/uhd/images/usrp_b210_fpga.bin`
 
 GitHub Actions workflow for B210 firmware builds: `.github/workflows/build-b210-firmware.yml`
 - Requires Xilinx Vivado (manual setup - not automated)
-- Applies float32 fix via `B210/scripts/fix_float32_firmware.sh`
+- Applies float32 fix via `B210/scripts/firmware/fix_float32_firmware.sh`
 
 ## Cellular Research (macOS Workflow)
 
